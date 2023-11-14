@@ -1,4 +1,4 @@
 ## Учебный проект React в продакшн
-''' start'''
-    "build:dev": "webpack --env mode=development",
-    "build:prod": "webpack --env mode=production",
+npm run start - запуск проекта на devserver
+npm run build:dev - dev сборка
+npm run build:prod - prod сборка
