@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+    "outDir": "./build/",
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true, // позволяет использовать импроты es6
+    "allowSyntheticDefaultImports": true, // позволяет использовать импроты es6
+    },
+    "ts-node": {
+    "compilerOptions": {
+    "module": "CommonJS"
+    }
+    }
+    }
+// {
+//     "compilerOptions": {
+//         "outDir": "./build/",
+//         "noImplicitAny": true,
+//         "target": "es5",
+//         "jsx": "react-jsx",
+//         "allowJs": true,
+//         "moduleResolution": "node",
+//         "allowSyntheticDefaultImports": true,
+//         "esModuleInterop": true,
+//         "baseUrl": ".",
+//         "module": "CommonJS"
+//     },
+
+//   }
+
+  
