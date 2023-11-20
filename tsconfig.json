@@ -3,8 +3,8 @@
     "outDir": "./build/",
     "baseUrl": ".",
     "paths": {
-        "*": ["./source/*"]
-      },
+      "*": ["./source/*"]
+    },
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
