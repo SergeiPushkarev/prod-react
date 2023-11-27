@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/ClassNames'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 import style from "./NavBar.module.scss"
