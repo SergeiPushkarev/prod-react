@@ -9,17 +9,17 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
-    const [open, setOpen] = useState(true)
-    const toggleOpen =()=>{
-        setOpen(!open)
-    }
+  const [open, setOpen] = useState(true)
+  const toggleOpen =()=>{
+    setOpen(!open)
+  }
   return (
     <div className={classNames(style.Sidebar,{[style.open]:open},[className])}>
-        <button onClick={toggleOpen} className={classNames (style.button,{},[className])}></button>
-        <div className={classNames(style.switchers)}>
-            <ThemeSwitcher/>
-            <LangSwitcher className={style.lang}/>
-        </div>
+      <button onClick={toggleOpen} className={classNames (style.button,{},[className])}></button>
+      <div className={classNames(style.switchers)}>
+        <ThemeSwitcher/>
+        <LangSwitcher className={style.lang}/>
+      </div>
     </div>
   )
 }
