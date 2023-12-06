@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { classNames } from 'shared/lib/ClassNames'
+import { classNames } from 'shared/lib/ClassNames/ClassNames'
 import { LangSwitcher } from 'shared/ui/LangSwitcher/ui/LangSwitcher'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 import style from "./Sidebar.module.scss"

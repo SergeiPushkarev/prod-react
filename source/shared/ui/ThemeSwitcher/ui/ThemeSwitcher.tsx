@@ -1,5 +1,5 @@
 import { useTheme } from 'app/providers/ThemeProvider'
-import { classNames } from 'shared/lib/ClassNames'
+import { classNames } from 'shared/lib/ClassNames/ClassNames'
 import LightIco from 'shared/assets/icons/theme-light.svg'
 import DarkIco from 'shared/assets/icons/theme-dark.svg'
 import { Button, ThemeButton } from 'shared/ui/Button/ui/Button'
