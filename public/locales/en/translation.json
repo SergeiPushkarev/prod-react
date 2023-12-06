@@ -3,5 +3,8 @@
   "Main": "Main",
   "About": "About",
   "...Load": "...Load",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "An unexpected error occurred": "An unexpected error occurred",
+  "Reload Page": "Reload Page",
+  "Error Button": "Error Button"
 }

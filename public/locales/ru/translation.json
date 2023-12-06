@@ -3,5 +3,8 @@
   "Main": "Главная",
   "About Page": "О сайте",
   "...Load": "...Загрузка",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "An unexpected error occurred": "Произошла непредвиденная ошибка",
+  "Reload Page": "Обновить страницу",
+  "Error Button": "Вызвать ошибку"
 }

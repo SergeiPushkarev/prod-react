@@ -15,7 +15,11 @@ export const Sidebar = ({className}: SidebarProps) => {
   }
   return (
     <div className={classNames(style.Sidebar,{[style.open]:open},[className])}>
-      <button onClick={toggleOpen} className={classNames (style.button,{},[className])}></button>
+      <button onClick={toggleOpen} className={classNames (style.button,{},[className])}>
+        {open
+          ? "<<<"
+          : ">>>"}
+      </button>
       <div className={classNames(style.switchers)}>
         <ThemeSwitcher/>
         <LangSwitcher className={style.lang}/>

@@ -1,8 +1,11 @@
 {
   "About": "About",
   "About page": "About page",
+  "An unexpected error occurred": "An unexpected error occurred",
+  "Error Button": "Error Button",
   "Language": "Language",
   "Main": "Main",
   "Main page": "Main page",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Reload Page": "Reload Page"
 }
