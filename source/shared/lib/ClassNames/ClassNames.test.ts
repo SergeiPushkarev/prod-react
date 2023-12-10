@@ -1,4 +1,4 @@
-import { classNames } from "./ClassNames"
+import { classNames } from "shared/lib/ClassNames/ClassNames"
 
 describe('classNames', ()=>{
   test('with only 1st param', ()=>{
