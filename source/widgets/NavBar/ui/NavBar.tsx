@@ -1,4 +1,3 @@
-/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/ClassNames/ClassNames'
 import { AppLink } from 'shared/ui/AppLink/AppLink'

@@ -20,9 +20,12 @@
     }
     },
     "include": [
-      ".config/jest/jest-setup.ts"
+      ".config/jest/jest-setup.ts",
+      "source/**/*.ts",
+      "source/**/*.tsx",
     ],
-    }
+    "exclude": ["node_modules"]
+}
 // {
 //     "compilerOptions": {
 //         "outDir": "./build/",

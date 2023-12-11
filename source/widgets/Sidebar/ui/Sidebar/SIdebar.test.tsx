@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, screen} from '@testing-library/react';
 import renderWithoutTtranslation from 'shared/lib/test/renderWithoutTtranslation/renderWithoutTtranslation';
 import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
 
