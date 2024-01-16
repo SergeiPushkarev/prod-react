@@ -20,9 +20,15 @@ export function buildPlagins ({paths,isDev}:BuildOptions): webpack.WebpackPlugin
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
+    
+  ]
+  if (isDev) {return [
+    ...plugins, 
+    new ReactRefreshWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(), 
     new BundleAnalyzerPlugin({
       openAnalyzer:false,
-    }),
+    })
   ]
-  if (isDev) {return [...plugins, new ReactRefreshWebpackPlugin(),new webpack.HotModuleReplacementPlugin()]} else return plugins
+  } else return plugins
 }
