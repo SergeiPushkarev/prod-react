@@ -36,7 +36,7 @@ module.exports = {
       markupOnly: true,
       ignoreAttribute: ["data-testid", 'to']
     }],
-    "react/jsx-props-no-spreading": ['error', {custom: 'ignore'}]
+    "react/jsx-props-no-spreading": 'off'
   },
   globals: {
     __IS_DEV__: true
