@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 jobs:
   pipeline:
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
@@ -33,7 +33,7 @@ jobs:
         run: npm run test
       - name: build sb
         if: always()
-        run: npm run build-storybook
+        run: npm run storybook
       - name: screenshot test
         if: always()
-        run: npm run test:ui:ci
+        run: npm run test:ui
