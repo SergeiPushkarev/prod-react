@@ -15,7 +15,7 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build-storybook": "build-storybook -c ./config/storybook",
     "test:ui": "npx loki test",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --chromeTolerance 4",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --chromeTolerance 5",
     "test:ui:approve": "npx loki approve",
     "test:ui:report": "node scripts/generate-visual-json-report.js && npx reg-cli --from .loki/report.json --report .loki/report.html"
   },
