@@ -15,7 +15,7 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build-storybook": "build-storybook -c ./config/storybook",
     "test:ui": "npx loki test",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --chromeTolerance 5",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "test:ui:approve": "npx loki approve",
     "test:ui:report": "node scripts/generate-visual-json-report.js && npx reg-cli --from .loki/report.json --report .loki/report.html"
   },
@@ -58,6 +58,7 @@
     "eslint-plugin-i18next": "^5.1.2",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.6.15",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
