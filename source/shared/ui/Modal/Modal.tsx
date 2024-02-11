@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/ClassNames/ClassNames'
 import style from "./Modal.module.scss"
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { Portal } from '../Portal/Portal'
-import { useTheme } from 'app/providers/ThemeProvider'
 
 
 interface ModalProps {
@@ -60,17 +59,15 @@ export const Modal = (props: ModalProps) => {
       window.removeEventListener('keydown', onKeyDown)
     }
   }, [isOpen, onKeyDown])
-
-  const {theme} = useTheme()
   
   return (
     <Portal>
       <div className={classNames(style.Modal,mods,[className])}>
         <div className={style.overlay} onClick={closeHandler}>
-          <div className={classNames(style.content,{},[style[theme]])} onClick={onContentClick}>
+          <div className={style.content} onClick={onContentClick}>
             {children}
           </div>
-        </div>  
+        </div>    
       </div>
     </Portal>
   )

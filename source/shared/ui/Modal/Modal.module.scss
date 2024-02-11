@@ -24,8 +24,8 @@
     transform: scale(0.5);
     transition: 0.3s transform;
     max-width: 60%;
-    color: #2b398a;
-    background: #d4d4d4;
+    color: var(--primary-color);
+    background: var(--bg-color);
 }
 
 .opened {
@@ -44,7 +44,7 @@
     }
 }
 
-.content.dark {
-    color: #0ae10a;
-    background: #0202d0;
-}
+// .content.dark {
+//     color: #0ae10a;
+//     background: #0202d0;
+// }
