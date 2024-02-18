@@ -12,6 +12,9 @@ export function buildLoaders ({isDev}:BuildOptions) : webpack.RuleSetRule[] {
   const fontLoader = {
     test: /\.(woff|woff2|eot|ttf|otf)$/i,
     type: 'asset/resource',
+    generator: {
+      filename: 'font/[hash][ext][query]'
+    }
   }
   const svgLoader = {
     test: /\.svg$/,
