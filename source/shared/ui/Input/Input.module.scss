@@ -1,0 +1,14 @@
+.Input {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.input {
+    flex-grow: 1;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    color: 0 0 0 var(--primary-color);
+}

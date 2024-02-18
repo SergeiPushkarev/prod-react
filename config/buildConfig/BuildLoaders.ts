@@ -9,6 +9,10 @@ export function buildLoaders ({isDev}:BuildOptions) : webpack.RuleSetRule[] {
       outputPath: 'images',
     }
   }
+  const fontLoader = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+    type: 'asset/resource',
+  }
   const svgLoader = {
     test: /\.svg$/,
     use: ['@svgr/webpack'],
@@ -49,5 +53,6 @@ export function buildLoaders ({isDev}:BuildOptions) : webpack.RuleSetRule[] {
     cssLoader,
     svgLoader,
     fileLoader,
+    fontLoader,
   ]
 }

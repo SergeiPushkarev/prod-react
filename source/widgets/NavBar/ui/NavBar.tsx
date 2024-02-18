@@ -3,8 +3,8 @@ import { classNames } from 'shared/lib/ClassNames/ClassNames'
 import style from "./NavBar.module.scss"
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
-import { Modal } from 'shared/ui/Modal/Modal'
 import { useCallback, useState } from 'react'
+import { LoginModal } from 'features/AuthByUsername'
 
 interface NavBarProps {
     className?:string
@@ -12,22 +12,26 @@ interface NavBarProps {
 
 export const NavBar = ({className}:NavBarProps) => {
   const {t} = useTranslation();
-  const [isAuthModal, setIsAuthModal] = useState(false)
-  const onToggleModal = useCallback(
+  const [isOpenModal, setIsOpenModal] = useState(false)
+  const openModal = useCallback(
     ()=> {
-      setIsAuthModal((prev)=>!prev)
+      setIsOpenModal(true)
+    },
+    [],
+  )
+  const closeModal = useCallback(
+    ()=> {
+      setIsOpenModal(false)
     },
     [],
   )
   
   return (
     <div className={classNames(style.NavBar,{},[className])}>
-      <Button theme={ThemeButton.CLEAR_INVERTED} className={style.links} onClick={onToggleModal}>
+      <Button theme={ThemeButton.CLEAR_INVERTED} className={style.links} onClick={openModal}>
         {t('Log In')}
       </Button>
-      <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, officia minus? Natus similique nesciunt porro blanditiis sit? Expedita hic autem adipisci error nobis laudantium quo. Aliquam, ex? Accusantium, magnam sit.
-      </Modal>
+      <LoginModal isOpen={isOpenModal} onClose={closeModal}/>
     </div>
   )
 }
