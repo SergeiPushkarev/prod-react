@@ -1,5 +1,5 @@
 import path from "path";
-import webpack, { RuleSetRule } from "webpack"
+import webpack, { DefinePlugin, RuleSetRule } from "webpack"
 import { buildCssLoaders } from "../buildConfig/loaders/buildCssLoaders";
 import { BuildPaths } from "../buildConfig/types/config";
 
@@ -10,7 +10,7 @@ export default ({config}: {config: webpack.Configuration}) =>{
     html:'',
     src: path.resolve(__dirname, "..", "..", "source")
   }
-  config.resolve?.modules?.push(paths.src);
+  config.resolve.modules = [paths.src,'node_modules'];
   config.resolve?.extensions?.push('.ts', ".tsx");
   config.module.rules = config.module?.rules?.map((rule?: RuleSetRule) => {
     if (/svg/.test(rule?.test as string)) {
@@ -27,5 +27,6 @@ export default ({config}: {config: webpack.Configuration}) =>{
   config.module?.rules?.push(
     buildCssLoaders(true)
   )
+  config.plugins?.push( new DefinePlugin({__IS_DEV__:true}))
   return config;
 }

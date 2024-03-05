@@ -7,7 +7,7 @@ export enum ThemeButton{
     CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
     BACKGROUND = 'background',
-    BACKGROUND_INVERTED = 'backgroundInverted'
+    BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
 export enum SizeButton {
@@ -20,17 +20,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?:string;
     theme?:ThemeButton;
     square?: boolean;
-    size?:SizeButton;  
+    size?:SizeButton;
+    disabled?:boolean;  
 }
 
 
 
 export const Button: FC<ButtonProps> = (props) => {
-  const {className, children, theme, square, size, ...otherProps} = props
+  const {className, children, theme, square, size, disabled, ...otherProps} = props
   const mods = {
     [style[theme]]:true,
     [style.square]:square,
-    [style[size]]:true
+    [style[size]]:true,
+    [style.disabled]:disabled
   }
   return (
     <button className={classNames(style.Button,mods,[className])} {...otherProps}>

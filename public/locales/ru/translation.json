@@ -1,6 +1,6 @@
 {
   "Language": "English",
-  "Main": "Главная",
+  "Main page": "Главная страница",
   "About Page": "О сайте",
   "...Load": "...Загрузка",
   "Page not found": "Страница не найдена",
@@ -10,5 +10,7 @@
   "ShortLanguage": "ENG",
   "Log In": "Войти",
   "Enter Name": "Введите имя",
-  "Enter Password": "Введите пароль"
+  "Enter Password": "Введите пароль",
+  "Authorization Form": "Форма Авторизации",
+  "Log Out": "Выйти"
 }

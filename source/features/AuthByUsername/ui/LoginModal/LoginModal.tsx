@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/ClassNames/ClassNames'
-import style from "./LoginModal.module.scss"
 import { Modal } from 'shared/ui/Modal/Modal'
 import { LoginForm } from '../LoginForm/LoginForm'
 

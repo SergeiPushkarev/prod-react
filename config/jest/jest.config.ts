@@ -40,6 +40,7 @@ export default {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname,'jestEmptyComponent.tsx'),
+    '^axios$': require.resolve('axios'),
   },
   modulePaths: ["<rootDir>/source"],
   // A set of global variables that need to be available in all test environments

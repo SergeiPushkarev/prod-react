@@ -1,6 +1,6 @@
 {
   "Language": "Русский",
-  "Main": "Main",
+  "Main page": "Main page",
   "About": "About",
   "...Load": "...Load",
   "Page not found": "Page not found",
@@ -10,5 +10,7 @@
   "ShortLanguage": "РУС",
   "Log In": "Log In",
   "Enter Name": "Enter Name",
-  "Enter Password": "Enter Password"
+  "Enter Password": "Enter Password",
+  "Authorization Form": "Authorization Form",
+  "Log Out": "Log Out"
 }
