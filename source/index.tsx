@@ -10,14 +10,15 @@ import "app/styles/font/font.scss";
 import { StoreProvider } from 'app/providers/StoreProvider';
 
 render (
-  <ErrorBoundary>
-    <StoreProvider>
-      <BrowserRouter>
+  
+  <StoreProvider>
+    <BrowserRouter>
+      <ErrorBoundary>
         <ThemeProvider>
           <App/>
-        </ThemeProvider> 
-      </BrowserRouter>
-    </StoreProvider>
-  </ErrorBoundary>,
+        </ThemeProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </StoreProvider>,
   document.getElementById('root')
 )

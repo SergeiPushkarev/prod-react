@@ -4,10 +4,9 @@ import style from "./NavBar.module.scss"
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { useCallback, useState } from 'react'
-import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
-import { userActions } from 'entities/User/model/slice/userSlice'
-import { getUserAuthData } from 'entities/User'
+import { userActions, getUserAuthData } from 'entities/User'
+import { LoginModal } from 'features/AuthByUsername'
 
 interface NavBarProps {
     className?:string
@@ -48,7 +47,7 @@ export const NavBar = ({className}:NavBarProps) => {
       <Button theme={ThemeButton.CLEAR_INVERTED} className={style.links} onClick={openModal}>
         {t('Log In')}
       </Button>
-      <LoginModal isOpen={isOpenModal} onClose={closeModal}/>
+      {isOpenModal && <LoginModal isOpen={isOpenModal} onClose={closeModal}/>}
     </div>
   )
 }

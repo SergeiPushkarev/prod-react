@@ -19,8 +19,7 @@ export function buildPlagins ({paths,isDev}:BuildOptions): webpack.WebpackPlugin
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
-    }),
-    
+    })
   ]
   if (isDev) {return [
     ...plugins, 
