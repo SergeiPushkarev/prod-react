@@ -6,20 +6,6 @@
     transition: width 0.2s;
 }
 
-.item span {
-    opacity: 0;
-    transition: 0.3s opacity;
-    width: 0;
-}
-
-.open {
-    width: var(--sidebar-width-open);
-
-    .item span {
-        opacity: 1;
-    }
-}
-
 .switchers {
     position: absolute;
     bottom: 20px;
@@ -44,14 +30,6 @@
     align-items: center;
     gap: 15px;
 }
-
-.item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
+.open {
+    width: var(--sidebar-width-open);
 }

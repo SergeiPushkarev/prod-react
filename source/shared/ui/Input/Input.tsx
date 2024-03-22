@@ -11,7 +11,6 @@ interface InputProps extends HTMLInputProp {
     placeholder?:string
 }
 
-// eslint-disable-next-line react/display-name
 export const Input = memo((props: InputProps) => {
   const {className, value, onChange, placeholder, type = "text", ...otherProps} = props
   const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>)=>{

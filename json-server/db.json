@@ -10,7 +10,14 @@
       { "id": "2", "text": "another comment about post 1", "postId": "1" }
     ],
     "profile": {
-      "name": "typicode"
+      "first": "Сергей",
+      "lastname": "Пушкарев",
+      "age": 33,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/924/924915.png"
     },
     "users": [
       { "id": "1", "username": "admin", "password": "1234" }

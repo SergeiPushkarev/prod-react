@@ -1,22 +1,18 @@
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { classNames } from 'shared/lib/ClassNames/ClassNames'
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button'
 import { LangSwitcher } from 'shared/ui/LangSwitcher/ui/LangSwitcher'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 import style from "./Sidebar.module.scss"
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import { useTranslation } from 'react-i18next'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
-import HomeIco from 'shared/assets/icons/Home.svg'
-import AboutIco from 'shared/assets/icons/about.svg'
+import { SidebarItemList } from 'widgets/Sidebar/model/types/items'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
 
 interface SidebarProps {
-    className?:string
+    className?:string,
 }
 
 
-export const Sidebar = ({className}: SidebarProps) => {
-  const {t} = useTranslation();
+export const Sidebar = memo(({className}: SidebarProps) => {
   const [open, setOpen] = useState(true)
   const toggleOpen =()=>{
     setOpen(!open)
@@ -36,14 +32,9 @@ export const Sidebar = ({className}: SidebarProps) => {
           : ">"}
       </Button>
       <div className={style.links}>
-        <AppLink to={RoutePath.main} theme={AppLinkTheme.INVERTED} className={style.item}>
-          <HomeIco className={style.icon}/>
-          <span>{t("Main")}</span>
-        </AppLink>
-        <AppLink to={RoutePath.about} theme={AppLinkTheme.INVERTED} className={style.item}>
-          <AboutIco className={style.icon}/>
-          <span>{t("About")}</span>
-        </AppLink>
+        {SidebarItemList.map((item)=>(
+          <SidebarItem item={item} isOpen={open} key={item.route}/>
+        ))}
       </div>
       <div className={classNames(style.switchers)}>
         <ThemeSwitcher/>
@@ -51,4 +42,4 @@ export const Sidebar = ({className}: SidebarProps) => {
       </div>
     </div>
   )
-}
+})
