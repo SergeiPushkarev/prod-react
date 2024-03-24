@@ -44,7 +44,7 @@ export default {
   },
   modulePaths: ["<rootDir>/source"],
   // A set of global variables that need to be available in all test environments
-  globals: {__IS_DEV__:true},
+  globals: {__IS_DEV__:true,__API__:""},
 
 
   // Indicates whether the coverage information should be collected while executing the test
