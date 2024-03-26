@@ -10,9 +10,10 @@ export default ({config}: {config: webpack.Configuration}) =>{
     html:'',
     src: path.resolve(__dirname, "..", "..", "source")
   }
-  config.resolve.modules = [paths.src,'node_modules'];
-  config.resolve?.extensions?.push('.ts', ".tsx");
-  config.module.rules = config.module?.rules?.map((rule?: RuleSetRule) => {
+  config.resolve!.modules = [paths.src,'node_modules'];
+  config.resolve!.extensions!.push('.ts', ".tsx");
+  //@ts-ignore
+  config.module.rules = config.module.rules.map((rule?: RuleSetRule) => {
     if (/svg/.test(rule?.test as string)) {
       return { ...rule, exclude: /\.svg$/i };
     }

@@ -1,7 +1,5 @@
 {
   "Language": "English",
-  "Main page": "Главная страница",
-  "About Page": "О сайте",
   "...Load": "...Загрузка",
   "Page not found": "Страница не найдена",
   "An unexpected error occurred": "Произошла непредвиденная ошибка",
@@ -13,7 +11,7 @@
   "Enter Password": "Введите пароль",
   "Authorization Form": "Форма Авторизации",
   "Log Out": "Выйти",
-  "Main": "Главная",
-  "Profile": "Профиль",
-  "About": "О сайте"
+  "Main": "Главная",  
+  "About": "О сайте",
+  "Profile": "Профиль"
 }

@@ -47,7 +47,7 @@ export const NavBar = memo(({className}:NavBarProps) => {
       <Button theme={ThemeButton.CLEAR_INVERTED} className={style.links} onClick={openModal}>
         {t('Log In')}
       </Button>
-      {isOpenModal && <LoginModal isOpen={isOpenModal} onClose={closeModal}/>}
+      {isOpenModal && (<LoginModal isOpen={isOpenModal} onClose={closeModal}/>)}
     </div>
   )
 })

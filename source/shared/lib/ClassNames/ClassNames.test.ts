@@ -2,7 +2,7 @@ import { classNames } from "shared/lib/ClassNames/ClassNames"
 
 describe('classNames', ()=>{
   test('with only 1st param', ()=>{
-    expect(classNames('smStr')).toBe('smStr')
+    expect(classNames('smStr',{},[])).toBe('smStr')
   });
   test('with additional class', () => {
     const exp = 'smStr class1 class2';

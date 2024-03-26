@@ -13,8 +13,8 @@ export const getUserByUsername = createAsyncThunk<User,getUserByUsernameProp, Th
   async(authData,ThunkApi) =>{
     const {dispatch, extra,rejectWithValue} = ThunkApi
     try {
-      const response = await extra.api.post('/login',authData)
-      extra.navigate('/profile')
+      const response = await extra.api.post<User>('/login',authData)
+      extra.navigate?.('/profile')
       if (!response.data) {
         throw new Error ('empty response')
       }

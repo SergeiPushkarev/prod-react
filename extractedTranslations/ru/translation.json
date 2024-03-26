@@ -3,6 +3,7 @@
   "About page": "About page",
   "An unexpected error occurred": "An unexpected error occurred",
   "Authorization Form": "Authorization Form",
+  "Edit profile": "Edit profile",
   "Enter Name": "Enter Name",
   "Enter Password": "Enter Password",
   "Error Button": "Error Button",
@@ -14,5 +15,7 @@
   "Page not found": "Page not found",
   "Profile": "Profile",
   "Profile Page": "Profile Page",
-  "Reload Page": "Reload Page"
+  "Reload Page": "Reload Page",
+  "Your name": "Your name",
+  "Your surname": "Your surname"
 }

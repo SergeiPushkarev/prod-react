@@ -17,7 +17,7 @@ export const Input = memo((props: InputProps) => {
     onChange?.(e.target.value)
   }
   return (
-    <div className={classNames(style.Input,{},[className])}>
+    <div className={classNames(style.InputWrapper,{},[className])}>
       <div>{placeholder && `${placeholder} >`}</div>
       <input className={style.input} type={type} value={value} onChange={onChangeHandler} {...otherProps}/>
     </div>

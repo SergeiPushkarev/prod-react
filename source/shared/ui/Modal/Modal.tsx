@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/ClassNames/ClassNames'
+import { Mods, classNames } from 'shared/lib/ClassNames/ClassNames'
 import style from "./Modal.module.scss"
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { Portal } from '../Portal/Portal'
 
 
@@ -29,11 +29,11 @@ export const Modal = (props: ModalProps) => {
   }, [isOpen])
   
   const [isClosing, setIsClosing] = useState(false)
-  const timeRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
   const closeHandler = useCallback(()=>{
     if(onClose) {
       setIsClosing(true);
-      timeRef.current = setTimeout(()=>{
+      timeRef.current = setTimeout(()=>{  
         onClose();
         setIsClosing(false)
       },ANIMATION_DELAY);
@@ -46,7 +46,7 @@ export const Modal = (props: ModalProps) => {
     }
   }, [closeHandler])
 
-  const mods: Record<string,boolean>={
+  const mods: Mods={
     [style.opened]: isOpen,
     [style.isClosing]: isClosing,
   }
@@ -68,7 +68,7 @@ export const Modal = (props: ModalProps) => {
   if (lazy && !isMounted) {
     return null
   }
-
+  
   return (
     <Portal>
       <div className={classNames(style.Modal,mods,[className])}>

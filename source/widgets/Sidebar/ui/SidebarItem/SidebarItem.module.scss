@@ -8,14 +8,16 @@
 .icon {
     fill: var(--inverted-primary-color);
 }
-.open {
-    .text {
-        opacity: 1;
-    }
-}
+
 .text {
     opacity: 0;
     transition: 0.3s opacity;
     width: 0;
     text-wrap: nowrap;
+}
+
+.open {
+    .text {
+        opacity: 1;
+    }
 }

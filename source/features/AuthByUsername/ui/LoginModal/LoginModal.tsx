@@ -6,14 +6,14 @@ import { Loader } from 'shared/ui/Loader/Loader'
 
 
 interface LoginModalProps {
-    className?:string
+    className?:string,
     isOpen?:boolean,
-    onClose?:()=>void,
+    onClose:()=>void,
 }
 
 export const LoginModal = ({className, isOpen, onClose}:LoginModalProps) => {
   return (
-    <Modal className={classNames(className, {}, [])} isOpen={isOpen} onClose={onClose} lazy>
+    <Modal className={classNames('', {}, [className])} isOpen={isOpen} onClose={onClose} lazy>
       <Suspense fallback={<Loader/>}>
         <LoginFormLazy onSuccess={onClose}/>
       </Suspense>

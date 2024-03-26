@@ -10,6 +10,7 @@
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
+    "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true, // позволяет использовать импроты es6
     "allowSyntheticDefaultImports": true, // позволяет использовать импроты es6
